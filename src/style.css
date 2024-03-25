@@ -35,7 +35,6 @@ form{
 }
 :focus-visible {
     outline: none;
-    color: aqua;
 }
 
 .instructions{
@@ -85,3 +84,4 @@ footer{
     display: block;
     color: #5e606c;
 }
+
