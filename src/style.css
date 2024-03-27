@@ -19,20 +19,31 @@ h1{
     text-align: center;
     letter-spacing: 10px;
 }
+  
+form {
+    display: flex;
+    padding: 30px;
+    background-color: #ffffea;
+    border-radius: 10px;
+    border: 2px solid #fbe0e0;        
+    display: flex;
+    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+    margin-bottom: 30px;
+}
+
+.hint {
+    line-height: 1.5;
+    margin-top: 5px;
+    opacity: 0.6;
+    font-size: 12px;
+}
+
 
 header{
     margin-bottom: 30px;
 }
 
-form{
-    padding: 30px;
-    background-color: #ffffea;
-    border-radius: 10px;
-    border: 2px solid #fbe0e0;
-    display: flex;
-    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-    margin-bottom: 30px;
-}
+
 :focus-visible {
     outline: none;
 }
@@ -85,3 +96,23 @@ footer{
     color: #5e606c;
 }
 
+.hidden{
+    display: none;
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    text-align: center;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
