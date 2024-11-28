@@ -11,7 +11,7 @@ function generateRecipe(event) {
 
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "16fb2o2e0345actc8844b4d07e81636f";
-  let context = "Your are a recipe master and love to cook quick, easy and simple recipes. Your mission is to generate short recipes in basic HTML. The list of ingredients cannot be longer than 5. The list of instructions cannot be longer than 5. The instructions must be simnple like bullet list. Make sure to follow the user instructions"; 
+  let context = "Your are a recipe master and love to cook quick, easy and simple recipes. Your mission is to generate short recipes in basic HTML. The list of ingredients cannot be longer than 5. The list of instructions cannot be longer than 5. The instructions must be simnple like bullet list. Make sure to follow the user instructions. do not add HTML at the begining of the recipe"; 
   let prompt = `user instructions: generate a recipe about ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
