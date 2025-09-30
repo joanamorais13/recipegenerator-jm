@@ -1,14 +1,22 @@
 body {
     background-color:#d7f9f8;
-    font-family: "poppins", sans-serif;}
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 a { 
     color: #f0aaaa;
     }
 
 .container {
-    margin: 120px auto 30px auto;
     max-width: 600px;
+    width: 100%;
+    padding: 20px;
 }
 
 h1{
@@ -26,9 +34,10 @@ form {
     background-color: #ffffea;
     border-radius: 10px;
     border: 2px solid #fbe0e0;        
-    display: flex;
     box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
     margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .hint {
@@ -50,25 +59,28 @@ header{
 
 .instructions{
     padding: 16px;
-    width: 80%;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
     font-size: 16px;
     line-height: 20px;
     color: #3c025e;
     border: 1px solid #e5d4ef;
     border-radius: 30px;
+    box-sizing: border-box;
 }
 
 .submit-button{
-    margin-left: 10px;
     background-color: #f0aaaa;
     color: white;
     border: none;
     border-radius: 30px;
     padding: 14px 24px;
-    width: 150px;
+    min-width: 120px;
     font-size: 16px;
     transition: all 200ms ease;
     cursor: pointer;
+    white-space: nowrap;
 }
 :hover.submit-button {
     background-color: #ffffea;
@@ -100,19 +112,47 @@ footer{
     display: none;
 }
 
-.blink {
-    animation: blink-animation 1s steps(5, start) infinite;
-    text-align: center;
-}
 
-@keyframes blink-animation {
-    to {
-        visibility: hidden;
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .instructions {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 16px;
+        box-sizing: border-box;
+    }
+    
+    .submit-button {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+    
+    .recipe {
+        padding: 15px;
+        font-size: 15px;
+        line-height: 1.8;
     }
 }
 
-@-webkit-keyframes blink-animation {
-    to {
-        visibility: hidden;
-    }
-}
+
+
